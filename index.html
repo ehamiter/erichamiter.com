@@ -57,7 +57,7 @@
   </div>
 
   <!--Img Col-->
-  <div class="w-full lg:w-2/5">
+  <div id="big-profile" class="w-full lg:w-2/5">
     <!-- Big profile image for side bar (desktop) -->
     <button class="js-change-theme focus:outline-none">
       <img src="./static/images/me-color.png" class="rounded-none lg:rounded-lg shadow-2xl hidden lg:block bg-cover bg-center">
@@ -75,27 +75,25 @@
       placement: 'bottom'
     })
 
-    //Toggle mode
-    const toggle = document.querySelector('.js-change-theme');
+    const toggles = document.querySelectorAll('.js-change-theme');
     const body = document.querySelector('body');
     const profile = document.getElementById('profile');
 
-
-    toggle.addEventListener('click', () => {
-
-      if (body.classList.contains('text-gray-900')) {
-      body.classList.remove('text-gray-900');
-      body.classList.add('text-gray-100');
-      profile.classList.remove('bg-white');
-      profile.classList.add('bg-gray-900');
-      } else
-      {
-      body.classList.remove('text-gray-100');
-      body.classList.add('text-gray-900');
-      profile.classList.remove('bg-gray-900');
-      profile.classList.add('bg-white');
-
-      }
+    toggles.forEach(toggle => {
+      toggle.addEventListener('click', () => {
+        // Code to toggle the classes for dark mode
+        if (body.classList.contains('text-gray-900')) {
+          body.classList.remove('text-gray-900');
+          body.classList.add('text-gray-100');
+          profile.classList.remove('bg-white');
+          profile.classList.add('bg-gray-900');
+        } else {
+          body.classList.remove('text-gray-100');
+          body.classList.add('text-gray-900');
+          profile.classList.remove('bg-gray-900');
+          profile.classList.add('bg-white');
+        }
+      });
     });
 
     </script>
