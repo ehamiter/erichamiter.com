@@ -14,8 +14,6 @@
   <link rel="icon" type="image/png" sizes="32x32" href="./static/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="./static/favicon-16x16.png">
   <link rel="manifest" href="./static/site.webmanifest">
-
-  <!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css"> -->
   <link rel="stylesheet" href="./static/css/style.css"/>
 
 </head>
@@ -29,7 +27,9 @@
 
     <div class="p-4 md:p-12 text-center lg:text-left">
       <!-- Image for mobile view-->
-      <div class="block lg:hidden rounded-full shadow-xl mx-auto -mt-16 h-48 w-48 bg-cover bg-center" style="background-image: url('./static/images/me-color.png')"></div>
+      <button class="js-change-theme focus:outline-none">
+        <div class="block lg:hidden rounded-full shadow-xl mx-auto -mt-16 h-48 w-48 bg-cover bg-center" style="background-image: url('./static/images/me-color.png')"></div>
+      </button>
 
       <h1 class="text-3xl font-bold pt-8 lg:pt-0">Eric Hamiter</h1>
       <div class="mx-auto lg:mx-0 w-4/5 pt-3 border-b-2 border-green-500 opacity-25"></div>
@@ -52,9 +52,6 @@
         <a class="link" href="https://www.dropbox.com/s/7inwovjthfpq0az/eric-hamiter-resume.pdf?dl=0" data-tippy-content="My Resume"><svg class="h-6 fill-current text-gray-600 hover:text-green-700" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M8.95722 5.07654c-.42115-.1125-.85403.13665-.96688.55648-.11283.41983.13708.85138.55824.96387l9.15052 2.44427c.4212.1125.8541-.13666.9669-.55649.1129-.41984-.1371-.85138-.5582-.96386L8.95722 5.07654ZM6.96873 9.43392c.11284-.41983.54572-.66899.96686-.55649l9.15061 2.44427c.4211.1125.6709.544.5582.9639-.1128.4198-.5457.669-.9669.5565l-9.15056-2.4443c-.42113-.1125-.67107-.54405-.55821-.96388ZM6.91397 12.6783c-.42114-.1125-.85403.1367-.96686.5565-.11285.4198.13708.8513.55822.9639l5.33777 1.4259c.4212.1124.8541-.1367.9669-.5567.1129-.4198-.1371-.8512-.5582-.9638l-5.33783-1.4258Z M20.8587 3.36707 8.65799.10804C6.97343-.34192 5.2419.65467 4.7905 2.334L.90837 16.777c-.45138 1.679.54831 3.405 2.23287 3.855L15.342 23.892c1.6846.4499 3.416-.5467 3.8675-2.226l3.8821-14.44346c.4513-1.67933-.5483-3.40549-2.2329-3.85547ZM6.3156 2.74138c.2257-.83967 1.09146-1.33797 1.93375-1.11297L20.4501 4.88744c.8422.22498 1.3421 1.08806 1.1163 1.92772L17.6843 21.2586c-.2255.8397-1.0914 1.338-1.9336 1.1129l-12.20079-3.259c-.84229-.225-1.34214-1.088-1.11645-1.9276L6.3156 2.74138Z"/></svg></a>
       </div>
 
-
-      <!-- Use https://simpleicons.org/ to find the svg for your preferred product -->
-
     </div>
 
   </div>
@@ -62,17 +59,11 @@
   <!--Img Col-->
   <div class="w-full lg:w-2/5">
     <!-- Big profile image for side bar (desktop) -->
-    <!-- block lg:hidden rounded-full shadow-xl mx-auto -mt-16 h-48 w-48 bg-cover bg-center -->
-    <img src="./static/images/me-color.png" class="rounded-none lg:rounded-lg shadow-2xl hidden lg:block bg-cover bg-center">
-    <!-- Image from: http://unsplash.com/photos/MP0IUfwrn0A -->
+    <button class="js-change-theme focus:outline-none">
+      <img src="./static/images/me-color.png" class="rounded-none lg:rounded-lg shadow-2xl hidden lg:block bg-cover bg-center">
+    </button>
 
   </div>
-
-
-  <!-- Pin to top right corner -->
-    <div class="absolute top-0 right-0 h-12 w-18 p-4">
-    <button class="js-change-theme focus:outline-none">🌛</button>
-    </div>
 
 </div>
 
@@ -93,14 +84,12 @@
     toggle.addEventListener('click', () => {
 
       if (body.classList.contains('text-gray-900')) {
-      toggle.innerHTML = "🌞";
       body.classList.remove('text-gray-900');
       body.classList.add('text-gray-100');
       profile.classList.remove('bg-white');
       profile.classList.add('bg-gray-900');
       } else
       {
-      toggle.innerHTML = "🌛";
       body.classList.remove('text-gray-100');
       body.classList.add('text-gray-900');
       profile.classList.remove('bg-gray-900');
