@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="robots" content="noindex">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>AI &rarr; Calendar &rarr; Art</title>
+        <link rel="apple-touch-icon" sizes="180x180" href="../static/images/icons/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="../static/images/icons/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="../static/images/icons/favicon-16x16.png">
+        <link rel="shortcut icon" href="../static/images/icons/favicon.ico">
+        <link rel="manifest" href="../static/site.webmanifest">
+        <style>
+        body {
+        font-family: 'Arial', sans-serif;
+        background-image: url('../static/images/bg.jpg');
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+        color: #333;
+        line-height: 1.6;
+        }
+        .container {
+        width: 90%;
+        max-width: 1000px;
+        margin: 30px auto;
+        padding: 30px;
+        background: #f8f8f8;
+        box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        border-radius: 15px;
+        }
+        h1 {
+        font-size: 2.5em;
+        margin-bottom: 10px;
+        text-align: center;
+        }
+        p {
+        margin-bottom: 15px;
+        }
+        a {
+        color: #007bff;
+        text-decoration: none;
+        }
+        a:hover {
+        text-decoration: underline;
+        }
+        ul {
+        list-style: none;
+        padding: 0;
+        }
+        ul li {
+        padding-left: 20px;
+        position: relative;
+        }
+        ul li:before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 7px;
+        width: 10px;
+        height: 10px;
+        background: #007bff;
+        border-radius: 50%;
+        }
+        img {
+        max-width: 100%;
+        height: auto;
+        display: block;
+        margin: 20px 0;
+        }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <h1>AI &rarr; Calendar &rarr; Art</h1>
+            <img src="https://raw.githubusercontent.com/ehamiter/aicalart/main/static/images/examples/2023-11-26-landscape.webp">
+            <p>
+                I saw <a href="https://turunen.dev/2023/11/20/Kuvastin-Unhinged-AI-eink-display/">this project</a> that used DALL-E, a Google calendar, and an e-ink display that was really cool, so, inspired by this, I wrote a Python script that does the following every day at midnight:
+                <ul>
+                    <li>Fetches the latest breaking news headline</li>
+                    <li>Hits Google's Calendar API, and grabs the next series of events from all of my calendars</li>
+                    <li>Looks up what day it is for National Holidays</li>
+                    <li>Looks up what day it is for Silly Days (e.g. "National Lemon Cupcake Day")</li>
+                    <li>Puts my cat Hobbes in the prompt</li>
+                    <li>Chooses a random style, e.g. "trompe-l'oeil realism, optical illusions, 3D objects on flat surfaces, hyper-realistic shadows"</li>
+                    <li>Generates images</li>
+                    <li>Uploads the images and prompts for the day to Amazon S3
+                </ul>
+            </p>
+            <p>
+                Two images are generated from the same prompt: one portrait, one landscape. Each of these orientations return with revised prompts from DALL-E, which are saved. I put in some tomfoolery where if you view it on your phone and flip it sideways, you see the alternate image. On the desktop if you resize your screen you can see both as well. </p>
+            <p>
+                Each day is archived, so you can travel back in time to see previous images until you hit Day Zero, which in this case, is November 25, 2023 (AICALART's official birthday).
+            </p>
+            <p> If you're viewing it with your phone, double tapping the screen will show and hide the prompt for the respective image. You can go back and forward in time by swiping left and right.</p>
+            <p> For keyboard users, you can hit the <code>?</code> key to show the prompt, and go back and forward in time by pressing the left and right arrow keys.
+            <p>
+                Website here: <a href="https://aical.art">https://aical.art</a>
+            </p>
+            <p>
+                Source here: <a href="https://github.com/ehamiter/aicalart">https://github.com/ehamiter/aicalart</a>
+            </p>
+        </div>
+    </body>
+</html>
