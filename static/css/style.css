@@ -367,6 +367,11 @@ video {
   margin-bottom: 8rem
 }
 
+.my-16{
+  margin-top: 4rem;
+  margin-bottom: 4rem
+}
+
 .-mt-16{
   margin-top: -4rem
 }
