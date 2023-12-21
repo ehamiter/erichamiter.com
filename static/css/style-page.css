@@ -1,0 +1,123 @@
+body {
+  font-family: 'Arial', sans-serif;
+  background-image: url('../static/images/bg.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  color: #333;
+  line-height: 1.6;
+}
+.container {
+  position: relative;
+  width: 90%;
+  max-width: 1000px;
+  margin: 30px auto;
+  padding: 30px;
+  padding-bottom: 100px;
+  background: #f8f8f8;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  border-radius: 15px;
+}
+h1 {
+  font-size: 2.5em;
+  margin-bottom: 10px;
+  text-align: center;
+}
+p {
+  margin-bottom: 15px;
+}
+a {
+  color: #007bff;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+ul {
+  list-style: none;
+  padding: 0;
+}
+ul li {
+  padding-left: 20px;
+  position: relative;
+}
+ul li:before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 7px;
+  width: 10px;
+  height: 10px;
+  background: #007bff;
+  border-radius: 50%;
+}
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 20px auto;
+}
+.back-to-home {
+  position: absolute;
+  bottom: 15px;
+  left: 30px;
+  font-size: 16px;
+}
+blockquote {
+    padding: 20px;
+    margin: 20px 0;
+    background: #f9f9f9;
+    border-left: 5px solid #007bff;
+    font-style: italic;
+    color: #555;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    border-radius: 4px;
+    font-size: 1.1em;
+}
+blockquote::before {
+    content: open-quote;
+    font-size: 2em;
+    line-height: 0;
+    margin-right: 10px;
+    vertical-align: -0.4em;
+    color: #007bff;
+}
+blockquote::after {
+    content: close-quote;
+    font-size: 2em;
+    line-height: 0;
+    margin-left: 10px;
+    vertical-align: -0.4em;
+    color: #007bff;
+}
+blockquote p {
+    margin: 0;
+}
+
+@media (max-width: 430px) {
+  .container {
+    width: 100%;
+    margin: 0;
+    padding: 15px;
+    padding-bottom: 80px;
+    box-sizing: border-box;
+  }
+  body, html {
+    overflow-x: hidden;
+  }
+  .back-to-home {
+    bottom: 10px;
+    left: 10px;
+  }
+}
+
+@media (max-width: 390px) {
+  .container {
+    padding: 10px;
+    padding-bottom: 60px;
+  }
+  .back-to-home {
+    bottom: 10px;
+    left: 10px;
+  }
+}
