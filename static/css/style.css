@@ -707,3 +707,7 @@ video {
     color: inherit;
     text-decoration: none;
 }
+
+.bg-image {
+  background-image: url('../static/images/bg.jpg')
+*/}
