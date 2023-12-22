@@ -15,8 +15,6 @@
   <link rel="shortcut icon" href="./static/images/icons/favicon.ico">
   <link rel="manifest" href="./static/site.webmanifest">
   <link rel="stylesheet" href="./static/css/style.css"/>
-  <link rel="preconnect" href="https://www.w3counter.com">
-  <script src="./static/js/site.js" defer></script>
 
 </head>
 
@@ -87,36 +85,10 @@
   </div>
 
 </div>
-
-  <script src="https://www.w3counter.com/tracker.js?id=150740"></script>
+  <script src="./static/js/site.js" defer></script>
   <script src="./static/js/popper.min.js"></script>
   <script src="./static/js/index.all.min.js"></script>
-  <script>
-    tippy('.link',{
-      placement: 'bottom'
-    })
-
-    const toggles = document.querySelectorAll('.js-change-theme');
-    const body = document.querySelector('body');
-    const profile = document.getElementById('profile');
-
-    toggles.forEach(toggle => {
-      toggle.addEventListener('click', () => {
-        if (body.classList.contains('text-gray-900')) {
-          body.classList.remove('text-gray-900');
-          body.classList.add('text-gray-100');
-          profile.classList.remove('bg-white');
-          profile.classList.add('bg-gray-900');
-        } else {
-          body.classList.remove('text-gray-100');
-          body.classList.add('text-gray-900');
-          profile.classList.remove('bg-gray-900');
-          profile.classList.add('bg-white');
-        }
-      });
-    });
-
-    </script>
+  <script async src="https://us.umami.is/script.js" data-website-id="298e65b4-2b2d-4a28-80ba-aa2fb7e20f51"></script>
 
 </body>
 
