@@ -1,16 +1,8 @@
-canvas {
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: -1;
-  display: block;
-}
-
 body {
   font-family: 'Arial', sans-serif;
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
+  background: #636363;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #a2ab58, #636363);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #a2ab58, #636363); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   color: #333;
   line-height: 1.6;
 }
