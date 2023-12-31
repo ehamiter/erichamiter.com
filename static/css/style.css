@@ -1,6 +1,16 @@
-/*
-! tailwindcss v3.3.5 | MIT License | https://tailwindcss.com
-*/
+canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  display: block;
+}
+
+.main-content {
+  position: relative;
+  z-index: 1;
+}
+
 
 *,
 ::before,
@@ -221,7 +231,6 @@ button,
 img,
 svg,
 video,
-canvas,
 audio,
 iframe,
 embed,
@@ -707,7 +716,3 @@ video {
     color: inherit;
     text-decoration: none;
 }
-
-.bg-image {
-  background-image: url('../static/images/bg.jpg')
-*/}
