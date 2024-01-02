@@ -1,3 +1,29 @@
+/* caveat-regular - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Caveat';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../fonts/caveat-v18-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+/* finlandica-regular - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Finlandica';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../fonts/finlandica-v8-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+
+.name-title {
+  font-family: 'Caveat';
+  font-weight: 700;
+  font-size: 2.25rem;
+  line-height: 2.25rem;
+}
+
 *,
 ::before,
 ::after {
@@ -17,7 +43,7 @@ html {
   -webkit-text-size-adjust: 100%;
   -moz-tab-size: 4;
   tab-size: 4;
-  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-family: 'Finlandica', sans-serif, system-ui, "Segoe UI", "Helvetica Neue", "Noto Sans", Arial;
   font-feature-settings: normal;
   font-variation-settings: normal;
 }
@@ -25,9 +51,8 @@ html {
 body {
   margin: 0;
   line-height: inherit;
-  background: #636363;  /* fallback for old browsers */
-  background: -webkit-linear-gradient(to right, #a2ab58, #636363);  /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to right, #a2ab58, #636363); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background: #82ACBA;
+  background: radial-gradient(at center, #82ACBA, #495263);
 }
 
 hr {
@@ -460,7 +485,7 @@ video {
 
 .border-green-500{
   --tw-border-opacity: 1;
-  border-color: rgb(34 197 94 / var(--tw-border-opacity))
+  border-color: rgb(98 125 77 / var(--tw-border-opacity))
 }
 
 .bg-gray-900{
@@ -522,7 +547,7 @@ video {
 }
 
 .font-sans{
-  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"
+  font-family: "Finlandica", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"
 }
 
 .text-3xl{
@@ -538,6 +563,11 @@ video {
 .text-sm{
   font-size: 0.875rem;
   line-height: 1.25rem
+}
+
+.text-md{
+  font-size: 1rem;
+  line-height: 1.33rem
 }
 
 .text-xl{
@@ -579,7 +609,7 @@ video {
 
 .text-green-700{
   --tw-text-opacity: 1;
-  color: rgb(21 128 61 / var(--tw-text-opacity))
+  color: rgb(98 125 77 / var(--tw-text-opacity))
 }
 
 .antialiased{
