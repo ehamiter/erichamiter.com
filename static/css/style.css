@@ -1,29 +1,3 @@
-/* caveat-regular - latin */
-@font-face {
-  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-  font-family: 'Caveat';
-  font-style: normal;
-  font-weight: 400;
-  src: url('../fonts/caveat-v18-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
-}
-
-/* finlandica-regular - latin */
-@font-face {
-  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-  font-family: 'Finlandica';
-  font-style: normal;
-  font-weight: 400;
-  src: url('../fonts/finlandica-v8-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
-}
-
-
-.name-title {
-  font-family: 'Caveat';
-  font-weight: 700;
-  font-size: 2.25rem;
-  line-height: 2.25rem;
-}
-
 *,
 ::before,
 ::after {
@@ -38,12 +12,25 @@
   --tw-content: '';
 }
 
+/* caveat-regular - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Caveat';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../fonts/caveat-v18-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+.name-title {
+  font-family: 'Caveat';
+  font-weight: 700;
+  font-size: 2.25rem;
+  line-height: 2.25rem;
+}
+
 html {
   line-height: 1.5;
-  -webkit-text-size-adjust: 100%;
-  -moz-tab-size: 4;
-  tab-size: 4;
-  font-family: 'Finlandica', sans-serif, system-ui, "Segoe UI", "Helvetica Neue", "Noto Sans", Arial;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
   font-feature-settings: normal;
   font-variation-settings: normal;
 }
@@ -544,10 +531,6 @@ video {
 
 .text-center{
   text-align: center
-}
-
-.font-sans{
-  font-family: "Finlandica", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"
 }
 
 .text-3xl{
