@@ -22,7 +22,7 @@
 }
 
 .name-title {
-  font-family: 'Caveat';
+  font-family: 'Caveat', -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
   font-weight: 700;
   font-size: 2.25rem;
   line-height: 2.25rem;
