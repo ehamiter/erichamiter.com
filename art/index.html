@@ -22,7 +22,7 @@
       <p>
         I saw <a href="https://turunen.dev/2023/11/20/Kuvastin-Unhinged-AI-eink-display/">this project</a> that used DALL-E, a Google calendar, and an e-ink display that was really cool, so, inspired by this, I wrote a Python script that does the following every day:
         <ul>
-          <li><s>Fetches the latest breaking news headline</s></li>
+          <li><s>Fetches the latest breaking news headline</s> (The news is typically too macabre to process images from DALL-E&mdash; it doesn't do well with keywords like "genocide")</li>
           <li>Hits Google's Calendar API, and grabs the next series of events from all of my calendars</li>
           <li>Looks up what day it is for National Holidays</li>
           <li>Looks up what day it is for Silly Days (e.g. "National Lemon Cupcake Day")</li>
@@ -39,7 +39,17 @@
         Each day is archived, so you can travel back in time to see previous images until you hit Day Zero, which in this case, is November 25, 2023 (AICALART's official birthday).
       </p>
       <p> If you're viewing it with your phone, swiping up on the screen will show the prompt for the respective image. You can hide it by swiping down. You can go back and forward in time by swiping left and right.</p>
-      <p> For keyboard users, you can hit the <code>?</code> key to show the list of options.
+      <p> For keyboard users, you can hit the <code>?</code> key to show the list of options:</p>
+
+      <pre>
+  ?   Show/hide this message
+  p   Show/hide the day's prompt
+  ←   Go back one day
+  →   Go forward one day
+  k   Start/pause Ken Burns-ish effect
+  q   Quit Ken Burns-ish effect
+      </pre>
+
       <p>
         Website here: <a href="https://aical.art">https://aical.art</a>
       </p>
