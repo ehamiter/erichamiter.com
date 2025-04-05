@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Weatherhue</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      background: linear-gradient(to bottom, #cce5ff, #f2f9ff);
+      color: #111;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .container {
+      max-width: 600px;
+      padding: 2rem;
+    }
+    .header {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 1rem;
+      margin-bottom: 1rem;
+    }
+    .app-icon {
+      width: 250px;
+      height: 250px;
+      border-radius: 16px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+    }
+    h1 {
+      font-size: 2.75rem;
+      font-weight: 800;
+      margin: 0;
+    }
+    h2 {
+      font-size: 1.75rem;
+      margin-top: 2.5rem;
+      color: #333;
+    }
+    p, li {
+      font-size: 1.1rem;
+      line-height: 1.6;
+    }
+    .highlight {
+      background: #eef6ff;
+      padding: 1.2rem;
+      border-radius: 12px;
+      margin: 1.5rem 0;
+      border-left: 5px solid #3399ff;
+    }
+    ul {
+      padding-left: 1.2rem;
+    }
+    .screenshots {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      gap: 1rem;
+      margin-top: 2rem;
+    }
+    .screenshots img {
+      width: 48%;
+      border-radius: 16px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    }
+    .footer {
+      text-align: center;
+      font-size: 1rem;
+      margin-top: 3rem;
+      color: #555;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <img class="app-icon" src="weatherhue.png" alt="Weatherhue App Icon">
+      <h1>Weatherhue</h1>
+    </div>
+    <p>Grant yourself permission to check out a minimalist weather app that feels as good as it looks. Built with SwiftUI and packed with subtle weather effects, haptics, and elegant color transitions.</p>
+
+    <div class="screenshots">
+      <img src="screenshot-1.png" alt="Weatherhue screenshot 1">
+      <img src="screenshot-2.png" alt="Weatherhue screenshot 2">
+    </div>
+
+    <div class="highlight">
+      <strong>🌦 Dynamic Weather Effects</strong>
+      <ul>
+        <li>Rain, snow, and thunderstorm animations</li>
+        <li>Lightning flashes and thunder haptics</li>
+        <li>Temperature-based background gradients</li>
+      </ul>
+    </div>
+
+    <div class="highlight">
+      <strong>📱 Smooth Interactions</strong>
+      <ul>
+        <li>Split-screen view for now and next hour... and the next...</li>
+        <li>Swipe, tap, and pull to navigate</li>
+        <li>"Back to Now" with a single tap or shake</li>
+      </ul>
+    </div>
+
+    <div class="highlight">
+      <strong>🎨 Visual Aesthetics</strong>
+      <p>Weatherhue brings the forecast to life through motion and color. Each condition blends into the next with smooth, subtle transitions inspired by Apple’s Human Interface Guidelines.</p>
+    </div>
+
+    <div class="highlight">
+      <strong>👨‍💻 Built for iOS</strong>
+      <ul>
+        <li>Supports iOS 16.5+</li>
+        <li>Uses CoreLocation and Open meteo a live weather API</li>
+        <li>Haptic engine integration</li>
+        <li>Precipitation visuals powered by the Vortex particle system</li>
+      </ul>
+    </div>
+
+    <div class="footer">
+      <p><strong>Coming soon to the App Store.</strong></p>
+      <p>Questions or comments? Contact <a href="mailto:weatherhue@erichamiter.com">weatherhue@erichamiter.com</a></p>
+    </div>
+  </div>
+</body>
+</html>
