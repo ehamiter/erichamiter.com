@@ -28,19 +28,6 @@
       max-width: 500px;
       width: 100%;
     }
-    @media (max-width: 768px) {
-      .main-content {
-        grid-template-columns: 1fr;
-        gap: 2rem;
-      }
-      .screenshot-container {
-        position: static;
-        order: -1;
-      }
-      .screenshot {
-        max-width: 300px;
-      }
-    }
     h1 {
       font-size: 2.5rem;
       margin: 1rem 0 0.5rem;
@@ -53,12 +40,13 @@
       max-width: 1200px;
       margin: 2rem auto;
       padding: 0 1rem;
-      display: grid;
-      grid-template-columns: 1fr 1fr;
+      display: flex;
+      flex-direction: row;
       gap: 3rem;
       align-items: start;
     }
     .features {
+      flex: 1;
       padding-left: 1rem;
     }
     .features h2 {
@@ -75,6 +63,7 @@
       color: #dddddd;
     }
     .screenshot-container {
+      flex: 1;
       position: sticky;
       top: 2rem;
       text-align: center;
@@ -95,6 +84,39 @@
     }
     .cta a:hover {
       background-color: #22c55e;
+    }
+    
+    /* Mobile Responsive Styles */
+    @media (max-width: 900px) {
+      header {
+        padding: 2rem 1rem 1rem;
+      }
+      h1 {
+        font-size: 2rem;
+      }
+      .main-content {
+        flex-direction: column !important;
+        gap: 2rem;
+        margin: 1rem auto;
+      }
+      .screenshot-container {
+        position: static !important;
+        order: -1;
+        margin-bottom: 2rem;
+      }
+      .screenshot {
+        max-width: 100% !important;
+        width: 100% !important;
+      }
+      .features {
+        padding-left: 0 !important;
+      }
+      .features h2 {
+        font-size: 1.5rem;
+      }
+      .features p {
+        font-size: 1rem;
+      }
     }
   </style>
 </head>
