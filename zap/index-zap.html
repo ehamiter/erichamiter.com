@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Zap</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      background: linear-gradient(to bottom, #1a1a2e, #16213e, #0f3460);
+      color: #f5f5f5;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .container {
+      width: 100%;
+      max-width: 800px;
+      padding: 1.5rem;
+    }
+    .header {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      gap: 1.5rem;
+      margin: 2rem 0;
+      text-align: center;
+    }
+    .intro {
+      padding: 1rem 2rem;
+      font-size: 1.2rem;
+      text-align: center;
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 12px;
+      margin: 2rem 0;
+      backdrop-filter: blur(10px);
+    }
+    .app-icon {
+      width: 200px;
+      height: 200px;
+      border-radius: 24px;
+      box-shadow: 0 8px 32px rgba(255, 193, 7, 0.3);
+      background: linear-gradient(135deg, #ffc107, #ff9800);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.2rem;
+      font-weight: bold;
+      color: #1a1a2e;
+    }
+    h1 {
+      font-size: 3rem;
+      font-weight: 800;
+      margin: 0;
+      text-align: center;
+      background: linear-gradient(45deg, #ffc107, #ffeb3b);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    h2 {
+      font-size: 1.8rem;
+      margin-top: 2.5rem;
+      color: #ffc107;
+      border-bottom: 2px solid #ffc107;
+      padding-bottom: 0.5rem;
+    }
+    p, li {
+      font-size: 1rem;
+      line-height: 1.7;
+      padding: 0.3rem 0;
+    }
+    .highlight {
+      background: rgba(255, 193, 7, 0.1);
+      padding: 2rem;
+      border-radius: 16px;
+      margin: 1.5rem 0;
+      border-left: 5px solid #ffc107;
+      backdrop-filter: blur(5px);
+    }
+    .download-section {
+      background: linear-gradient(135deg, #ffc107, #ff9800);
+      color: #1a1a2e;
+      padding: 2rem;
+      border-radius: 16px;
+      margin: 2rem 0;
+      text-align: center;
+    }
+    .download-button {
+      display: inline-block;
+      background: #1a1a2e;
+      color: #ffc107;
+      padding: 1rem 2rem;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 1.1rem;
+      margin: 1rem 0;
+      transition: all 0.3s ease;
+    }
+    .download-button:hover {
+      background: #2d2d3a;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    }
+    ul {
+      padding-left: 1.5rem;
+    }
+    ul li {
+      margin: 0.8rem 0;
+    }
+    .features-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+      gap: 1.5rem;
+      margin: 2rem 0;
+    }
+    .feature-card {
+      background: rgba(255, 255, 255, 0.05);
+      padding: 1.5rem;
+      border-radius: 12px;
+      border: 1px solid rgba(255, 193, 7, 0.2);
+    }
+    .feature-title {
+      color: #ffc107;
+      font-weight: 600;
+      font-size: 1.1rem;
+      margin-bottom: 1rem;
+    }
+    .tech-specs {
+      background: rgba(255, 255, 255, 0.05);
+      padding: 1.5rem;
+      border-radius: 12px;
+      margin: 2rem 0;
+    }
+    .footer {
+      text-align: center;
+      font-size: 1rem;
+      margin-top: 3rem;
+      color: #ccc;
+      padding: 2rem 0;
+      border-top: 1px solid rgba(255, 193, 7, 0.3);
+    }
+    .footer a {
+      color: #ffc107;
+      text-decoration: none;
+    }
+    .footer a:hover {
+      text-decoration: underline;
+    }
+    .mascot-description {
+      text-align: center;
+      font-style: italic;
+      color: #ccc;
+      margin-top: 1rem;
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <div>
+        <!-- Placeholder for Zap Pizazz image -->
+        <div class="app-icon">
+            <img class="app-icon" src="../static/images/zap/zap-pizazz.png" alt="Zap Pizazz App Icon">
+        </div>
+        <div class="mascot-description">
+          Zap Pizazz, <strong>Zap</strong>'s official esteemed anthropomorphic logo
+        </div>
+      </div>
+      <h1>Zap</h1>
+    </div>
+    
+    <p class="intro">A macOS application for remote-to-remote file transfers using rsync over SSH. Zap makes it easy to transfer files between remote servers with a beautiful dual-pane interface and real-time progress monitoring.</p>
+
+    <!-- <div class="download-section">
+      <h2 style="color: #1a1a2e; margin-top: 0; border: none;">Download & Installation</h2>
+      <a href="https://github.com/ehamiter/zap/releases/download/v1.0.0/Zap.zip" class="download-button">📥 Download Zap v1.0.0</a>
+      <p style="color: #1a1a2e; margin-top: 1rem;">
+        <strong>Requirements:</strong> macOS 11.0+ • SSH keys configured • rsync installed
+      </p>
+      <p style="color: #1a1a2e; font-size: 0.9rem;">
+        <em>Note: Zap is notarized by Apple for security and can be safely downloaded and run on any Mac.</em>
+      </p>
+    </div> -->
+
+    <h2>Key Features</h2>
+    <div class="features-grid">
+      <div class="feature-card">
+        <div class="feature-title">🖥️ Dual-Pane Interface</div>
+        <p>Browse remote filesystems through SSH connections with sortable columns and intuitive navigation.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-title">📦 Batch Transfers</div>
+        <p>Select and transfer multiple files simultaneously with Cmd+click for multi-select support.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-title">🔄 Background Processing</div>
+        <p>Transfers continue even if Zap is closed, using nohup for reliable background execution.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-title">📊 Real-time Progress</div>
+        <p>Detailed progress bars showing transfer percentage, speed, ETA, and bytes transferred.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-title">🎵 Audio Notifications</div>
+        <p>Get notified when your transfers complete with built-in audio alerts.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-title">🔍 Hidden File Toggle</div>
+        <p>Show or hide dot files with a simple checkbox toggle for cleaner file browsing.</p>
+      </div>
+    </div>
+
+    <div class="highlight">
+      <h3 style="color: #ffc107; margin-top: 0;">🚀 Advanced Transfer Technology</h3>
+      <p>Zap uses sophisticated rsync techniques for efficient remote-to-remote transfers:</p>
+      <ul>
+        <li><strong>Smart Routing:</strong> Uses the destination server as a bridge to pull files from the source</li>
+        <li><strong>Network Resilience:</strong> Automatic fallback mechanisms for connectivity issues</li>
+        <li><strong>Progress Monitoring:</strong> Continuously monitors transfer status via SSH polling</li>
+        <li><strong>Error Handling:</strong> Comprehensive error detection and reporting</li>
+      </ul>
+    </div>
+
+    <div class="highlight">
+      <h3 style="color: #ffc107; margin-top: 0;">⌨️ Keyboard Shortcuts</h3>
+      <ul>
+        <li><strong>Cmd+T:</strong> Start transfer of selected files</li>
+        <li><strong>Cmd+R:</strong> Refresh file lists</li>
+        <li><strong>Cmd+,:</strong> Open settings</li>
+      </ul>
+    </div>
+
+    <div class="tech-specs">
+      <h3 style="color: #ffc107; margin-top: 0;">🔧 Technical Requirements</h3>
+      <ul>
+        <li>macOS 11.0 or later</li>
+        <li>SSH keys configured for passwordless login to remote servers</li>
+        <li>rsync installed on local and remote systems (usually pre-installed)</li>
+        <li>Network access to your remote servers</li>
+      </ul>
+    </div>
+
+    <div class="highlight">
+      <h3 style="color: #ffc107; margin-top: 0;">🔒 Security Notice</h3>
+      <p><strong>Important:</strong> This application requires access to your SSH configuration and keys, and the ability to execute rsync commands. Zap is notarized by Apple and follows macOS security best practices. Please be aware of the security implications when configuring SSH access to your servers.</p>
+    </div>
+
+    <div class="footer">
+      <p><strong>Open Source Project</strong></p>
+      <p>View the source code and contribute on <a href="https://github.com/ehamiter/zap" target="_blank">GitHub</a></p>
+      <p>Questions or feedback? Contact <a href="mailto:ehamiter@gmail.com">ehamiter@gmail.com</a></p>
+    </div>
+  </div>
+</body>
+</html> 
