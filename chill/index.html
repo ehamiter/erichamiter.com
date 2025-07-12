@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Chill Destruction</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+      background-image: url('../static/images/chill/app-background-1.png');
+      background-size: cover;
+      background-attachment: fixed;
+      background-position: center;
+      color: #fff;
+      text-align: center;
+    }
+    .container {
+      background: rgba(0, 0, 0, 0.65);
+      padding: 2rem;
+      max-width: 900px;
+      margin: auto;
+    }
+    h1 {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+    }
+    p {
+      font-size: 1.25rem;
+      line-height: 1.6;
+    }
+    .instructions {
+      text-align: left;
+      margin: 2rem 0;
+      background: rgba(255, 255, 255, 0.05);
+      padding: 1rem;
+      border-radius: 10px;
+    }
+    .carousel-container {
+      position: relative;
+      margin: 2rem 0;
+    }
+    .carousel {
+      display: flex;
+      overflow-x: auto;
+      gap: 1rem;
+      padding: 1rem 0;
+      scroll-snap-type: x mandatory;
+      scrollbar-width: thin;
+    }
+    .carousel::-webkit-scrollbar {
+      height: 8px;
+    }
+    .carousel::-webkit-scrollbar-track {
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 4px;
+    }
+    .carousel::-webkit-scrollbar-thumb {
+      background: rgba(255, 255, 255, 0.3);
+      border-radius: 4px;
+    }
+    .carousel-item {
+      flex-shrink: 0;
+      width: 200px;
+      height: 200px;
+      position: relative;
+      cursor: pointer;
+      border-radius: 12px;
+      overflow: hidden;
+      scroll-snap-align: start;
+      transition: transform 0.2s ease;
+    }
+    .carousel-item:hover {
+      transform: scale(1.05);
+    }
+    .carousel-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 12px;
+    }
+    .carousel-item.video {
+      background: #000;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      border: 2px solid #333;
+    }
+    .carousel-item.video::before {
+      content: '▶';
+      font-size: 3rem;
+      color: white;
+      position: absolute;
+      z-index: 3;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
+    }
+    .carousel-item.video::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(0, 0, 0, 0.3);
+      z-index: 2;
+    }
+    .carousel-item.video img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 12px;
+    }
+    .video-thumbnail {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    
+    /* Modal styles */
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 1000;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.9);
+      animation: fadeIn 0.3s ease;
+    }
+    .modal.active {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 60px 20px 20px 20px;
+      box-sizing: border-box;
+    }
+    .modal-content {
+      position: relative;
+      width: 90vw;
+      height: 90vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .modal-content img {
+      max-width: 90vw;
+      max-height: 90vh;
+      width: auto;
+      height: auto;
+      border-radius: 12px;
+      object-fit: contain;
+    }
+    .modal-content iframe {
+      width: 315px;
+      height: 560px;
+      border: none;
+      border-radius: 12px;
+    }
+    .modal-close {
+      position: absolute;
+      top: -50px;
+      right: 10px;
+      color: white;
+      font-size: 2rem;
+      cursor: pointer;
+      background: rgba(0, 0, 0, 0.5);
+      border: none;
+      padding: 5px 10px;
+      border-radius: 50%;
+      z-index: 1001;
+    }
+    .modal-close:hover {
+      background: rgba(0, 0, 0, 0.8);
+    }
+    
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+    
+    @media (max-width: 768px) {
+      .carousel-item {
+        width: 160px;
+        height: 160px;
+      }
+      .modal-content iframe {
+        width: 280px;
+        height: 500px;
+      }
+      .modal-content img {
+        max-width: 95vw;
+        max-height: 85vh;
+      }
+    }
+    .rocket {
+      width: 80px;
+      margin: 1rem auto;
+    }
+    .store-link {
+      display: inline-block;
+      transition: transform 0.2s ease;
+    }
+    .store-link:hover {
+      transform: scale(1.05);
+    }
+    .store-link img {
+      height: 60px;
+      width: auto;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <img src="../static/images/chill/rocket.png" alt="Rocket" class="rocket" />
+    <h1>Chill Destruction</h1>
+    <p>Ever want to just chill and launch projectiles into things to make them explode?</p>
+    <p>Well, your time has come. </p>
+    <p>Relax to some ambient beats while you fling your hapless space vehicle into gargantuan-sized objects in space to watch them explode into ever-smaller pieces, until there is no more. Once all objects have been destroyed, a new round generates with new shapes.</p>
+    <p>So, chill... and destroy.</p>
+
+    <a class="store-link" href="https://apps.apple.com/us/app/chill-destruction/id6748417365" target="_blank">
+      <img src="../static/images/buttons/download_on_the_app_store.svg" alt="Download on the App Store">
+    </a>
+
+    <div class="carousel-container">
+      <div class="carousel">
+        <div class="carousel-item video" onclick="openModal('video', 'Li6sxOttrOU')">
+            <img src="https://img.youtube.com/vi/Li6sxOttrOU/hqdefault.jpg" alt="Gameplay Video" class="video-thumbnail">
+          </div>
+        <div class="carousel-item" onclick="openModal('image', '../static/images/chill/chill-1.png')">
+          <img src="../static/images/chill/chill-1.png" alt="Gameplay 1">
+        </div>
+        <div class="carousel-item" onclick="openModal('image', '../static/images/chill/chill-2.png')">
+          <img src="../static/images/chill/chill-2.png" alt="Gameplay 2">
+        </div>
+        <div class="carousel-item" onclick="openModal('image', '../static/images/chill/chill-3.png')">
+          <img src="../static/images/chill/chill-3.png" alt="Gameplay 3">
+        </div>
+        <div class="carousel-item" onclick="openModal('image', '../static/images/chill/chill-4.png')">
+          <img src="../static/images/chill/chill-4.png" alt="Gameplay 4">
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal -->
+    <div id="modal" class="modal" onclick="closeModal()">
+      <div class="modal-content" onclick="event.stopPropagation()">
+        <button class="modal-close" onclick="closeModal()">&times;</button>
+        <div id="modal-body"></div>
+      </div>
+    </div>
+
+  </div>
+
+  <script>
+    function openModal(type, src) {
+      const modal = document.getElementById('modal');
+      const modalBody = document.getElementById('modal-body');
+      
+      modalBody.innerHTML = '';
+      
+      if (type === 'image') {
+        const img = document.createElement('img');
+        img.src = src;
+        img.alt = 'Gameplay Screenshot';
+        modalBody.appendChild(img);
+      } else if (type === 'video') {
+        const iframe = document.createElement('iframe');
+        iframe.src = `https://www.youtube.com/embed/${src}?autoplay=1`;
+        iframe.allowFullscreen = true;
+        iframe.allow = 'autoplay; encrypted-media';
+        modalBody.appendChild(iframe);
+      }
+      
+      modal.classList.add('active');
+      document.body.style.overflow = 'hidden';
+    }
+    
+    function closeModal() {
+      const modal = document.getElementById('modal');
+      const modalBody = document.getElementById('modal-body');
+      
+      modal.classList.remove('active');
+      modalBody.innerHTML = '';
+      document.body.style.overflow = 'auto';
+    }
+    
+    // Close modal with Escape key
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape') {
+        closeModal();
+      }
+    });
+  </script>
+</body>
+</html>
