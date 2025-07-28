@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,30 +14,35 @@
       min-height: 100vh;
       color: #ffffff;
     }
+
     header {
       text-align: center;
       padding: 4rem 1rem 2rem;
     }
+
     header img {
-      width: 120px;
-      border-radius: 24px;
+      height: 60px;
     }
+
     .app-icon {
       width: 120px;
-      border-radius: 24px;
     }
+
     .screenshot {
       max-width: 500px;
       width: 100%;
     }
+
     h1 {
       font-size: 2.5rem;
       margin: 1rem 0 0.5rem;
     }
+
     p.lead {
       font-size: 1.25rem;
       color: #bbbbbb;
     }
+
     .main-content {
       max-width: 1200px;
       margin: 2rem auto;
@@ -46,48 +52,35 @@
       gap: 3rem;
       align-items: start;
     }
+
     .features {
       flex: 1;
       padding-left: 1rem;
     }
+
     .features h2 {
       font-size: 1.75rem;
       margin-top: 2rem;
       color: #DEB313;
     }
+
     .features h2:first-child {
       margin-top: 0;
     }
+
     .features p {
       font-size: 1.1rem;
       line-height: 1.6;
       color: #dddddd;
     }
+
     .screenshot-container {
       flex: 1;
       position: sticky;
       top: 2rem;
       text-align: center;
     }
-    .cta {
-      text-align: center;
-      margin-top: 3rem;
-      margin-bottom: 2rem;
-    }
-    .cta a {
-      display: inline-block;
-      background-color: #006B80;
-      color: #ddd;
-      padding: 0.75rem 1.5rem;
-      font-weight: 700;
-      border-radius: 8px;
-      text-decoration: none;
-      transition: background-color 0.2s;
-    }
-    .cta a:hover {
-      background-color: #006B80;
-    }
-    
+
     .support-section {
       text-align: center;
       margin: 3rem auto 2rem;
@@ -95,19 +88,19 @@
       max-width: 600px;
       border-top: 1px solid #333;
     }
-    
+
     .support-section h2 {
       font-size: 1.75rem;
       margin-bottom: 1rem;
       color: #DEB313;
     }
-    
+
     .support-section p {
       font-size: 1.1rem;
       color: #dddddd;
       margin-bottom: 1.5rem;
     }
-    
+
     .support-email {
       display: inline-block;
       color: #006B80;
@@ -116,79 +109,97 @@
       font-size: 1.1rem;
       transition: color 0.2s;
     }
-    
+
     .support-email:hover {
       color: #DEB313;
     }
-    
+
     /* Mobile Responsive Styles */
     @media (max-width: 900px) {
       header {
         padding: 2rem 1rem 1rem;
       }
+
       h1 {
         font-size: 2rem;
       }
+
       .main-content {
         flex-direction: column !important;
         gap: 2rem;
         margin: 1rem auto;
       }
+
       .screenshot-container {
         position: static !important;
         order: -1;
         margin-bottom: 2rem;
       }
+
       .screenshot {
         max-width: 100% !important;
         width: 100% !important;
       }
+
       .features {
         padding-left: 0 !important;
       }
+
       .features h2 {
         font-size: 1.5rem;
       }
+
       .features p {
         font-size: 1rem;
       }
     }
   </style>
 </head>
+
 <body>
   <header>
     <img src="../static/images/cadencesync/cadencesync.png" alt="CadenceSync App Icon" class="app-icon">
     <h1>CadenceSync</h1>
     <p class="lead">Run to any song, at your perfect pace.</p>
+
+    <div style="margin-top: 2rem; text-align: center;">
+      <a href="https://apps.apple.com/app/cadencesync/id6747299816" target="_blank" rel="noopener noreferrer">
+        <img src="../static/images/buttons/download_on_the_app_store.svg" alt="Get it on the App Store">
+      </a>
+    </div>
   </header>
-  
+
   <div class="main-content">
     <div class="screenshot-container">
-      <img src="../static/images/cadencesync/iphone-cadence-sync.png" alt="CadenceSync iPhone App Screenshot" class="screenshot">
+      <img src="../static/images/cadencesync/iphone-cadence-sync.png" alt="CadenceSync iPhone App Screenshot"
+        class="screenshot">
     </div>
-    
+
     <section class="features">
       <h2>🎵 Match Your Stride</h2>
-      <p>CadenceSync dynamically adjusts the tempo of your favorite music to match your desired stride rate (SPM – strides per minute). Whether you prefer 160 or 180 SPM, the music will flex to fit your rhythm.</p>
+      <p>CadenceSync dynamically adjusts the tempo of your favorite music to match your desired stride rate (SPM –
+        strides per minute). Whether you prefer 160 or 180 SPM, the music will flex to fit your rhythm.</p>
 
       <h2>⚡ Boost Performance</h2>
-      <p>Studies show that syncing your movement to music can enhance endurance and focus. CadenceSync gives you that edge by keeping your stride and beat in perfect harmony—without compromising audio quality.</p>
+      <p>Studies show that syncing your movement to music can enhance endurance and focus. CadenceSync gives you that
+        edge by keeping your stride and beat in perfect harmony—without compromising audio quality.</p>
 
       <h2>🧠 Smart Adjustments</h2>
-      <p>CadenceSync intelligently suggests subtle tempo variations—like half-time or double-time—that feel musically natural while still meeting your cadence goals. It's not just speed-up or slow-down. It's rhythm intelligence.</p>
+      <p>CadenceSync intelligently suggests subtle tempo variations—like half-time or double-time—that feel musically
+        natural while still meeting your cadence goals. It's not just speed-up or slow-down. It's rhythm intelligence.
+      </p>
 
       <h2>🎧 Built for Runners</h2>
-      <p>Simple, clean, and made for the run. Just select your song, pick your pace, and hit the road. CadenceSync handles the rest in real time.</p>
+      <p>Simple, clean, and made for the run. Just select your song, pick your pace, and hit the road. CadenceSync
+        handles the rest in real time.</p>
     </section>
   </div>
-  <div class="cta">
-    <a href="https://testflight.apple.com/join/m41EPnT9">Join the Beta on TestFlight</a>
-  </div>
-  
+
   <div class="support-section">
     <h2>Need Help?</h2>
     <p>Questions, feedback, or need support? We're here to help!</p>
     <a href="mailto:cadencesync@erichamiter.com" class="support-email">cadencesync@erichamiter.com</a>
   </div>
 </body>
+
 </html>
