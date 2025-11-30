@@ -714,6 +714,19 @@ video {
   }
 }
 
+.profile-photo {
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.4);
+  border: 4px solid rgba(255, 255, 255, 0.3);
+}
+
+.lg\:pl-8 {
+  padding-left: 2rem;
+}
+
+.lg\:rounded-xl {
+  border-radius: 0.75rem;
+}
+
 /* keep it on the dl */
 .shh {
     color: inherit;
